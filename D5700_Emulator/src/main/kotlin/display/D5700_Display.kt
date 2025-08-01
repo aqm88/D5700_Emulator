@@ -1,6 +1,6 @@
 package org.example.display
 
-class D5700_Display(height:Int, width:Int ): Display<Char>(height, width) {
+class D5700_Display(height:Int = 8, width:Int = 8 ): Display<Char>(height, width) {
 
     init {
         frameBuffer = Array<Char>(height * width) { '0' }
@@ -19,6 +19,11 @@ class D5700_Display(height:Int, width:Int ): Display<Char>(height, width) {
     }
 
     override fun render() {
+        println()
+        for (i in 0 until width) {
+            print("=")
+        }
+        println()
         for (y in 0 until height) {
             for (x in 0 until width) {
                 val index = y * width + x
@@ -26,5 +31,9 @@ class D5700_Display(height:Int, width:Int ): Display<Char>(height, width) {
             }
             println()
         }
+        for (i in 0 until width) {
+            print("=")
+        }
+        println()
     }
 }

@@ -23,9 +23,9 @@ class DisplayTest {
         val outputString = output.toString().trim().replace("\r", "")
         val lines = outputString.split("\n")
 
-        assertEquals(2, lines.size)
-        assertEquals("000", lines[0])
-        assertEquals("0X0", lines[1])
+        assertEquals(4, lines.size)
+        assertEquals("000", lines[1])
+        assertEquals("0X0", lines[2])
     }
 
     @Test
@@ -68,7 +68,7 @@ class DisplayTest {
         display.render()
 
         System.setOut(originalOut)
-        val expected = "AB\nCD"
+        val expected = "==\nAB\nCD\n=="
         val actual = output.toString().trim().replace("\r", "")
         assertEquals(expected, actual)
     }
