@@ -1,4 +1,4 @@
-package org.example.project
+package project
 
 import org.example.memory.D5700_RAM
 import org.example.memory.D5700_ROM
