@@ -68,7 +68,7 @@ class DisplayTest {
         display.render()
 
         System.setOut(originalOut)
-        val expected = "==\nAB\nCD\n=="
+        val expected = "==\nAC\nBD\n=="
         val actual = output.toString().trim().replace("\r", "")
         assertEquals(expected, actual)
     }

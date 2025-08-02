@@ -13,7 +13,7 @@ class D5700_Display(height:Int = 8, width:Int = 8 ): Display<Char>(height, width
         if (x < 0 || x >= width || y < 0 || y >= height) {
             throw IndexOutOfBoundsException("Pixel coordinates ($x, $y) are out of bounds for display of size $width x $height")
         }
-        val index = y * width + x
+        val index = x * width + y
         frameBuffer[index] = newValue
         render()
     }
